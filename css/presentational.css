@@ -1,0 +1,462 @@
+/* @font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto-sans.eot");
+  src: url("../fonts/noto-sans.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-sans.woff2") format("woff2"), url("../fonts/noto-sans.woff") format("woff"), url("../fonts/noto-sans.ttf") format("truetype"), url("../fonts/noto-sans.svg#Noto-Sans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans Bold";
+  src: url("../fonts/noto-sans--bold.eot");
+  src: url("../fonts/noto-sans--bold.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-sans--bold.woff2") format("woff2"), url("../fonts/noto-sans--bold.woff") format("woff"), url("../fonts/noto-sans--bold.ttf") format("truetype"), url("../fonts/noto-sans--bold.svg#noto-sans--bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Helvetica";
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #3d4457;
+  background-color: #eeeeee;
+}
+
+::-moz-selection {
+  background: rgba(253, 77, 121, 0.5);
+  /* color: rgb(240, 240, 240); */
+}
+::selection {
+  background: rgba(253, 77, 121, 0.5);
+  /* color: rgb(240, 240, 240); */
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Noto Sans Bold", sans-serif;
+  color: #3d4457;
+}
+
+h1 {
+  font-family: "Noto Sans Bold", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.675);
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 24px;
+}
+
+:target {
+  padding-top: 60px;
+  margin-top: -60px;
+  transition: 0.1s;
+}
+
+#navbar {
+  z-index: 1;
+  background-color: #2c4457;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  opacity: 0.975;
+  text-align: center;
+}
+
+#navbar a {
+  display: inline-block;
+  color: #f2f2f2;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  background-color: rgba(253, 77, 121, 0.5);
+}
+
+.header {
+  padding: 0.1vw 0.1vw;
+  min-height: 240px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: #2c4457;
+}
+
+.section {
+  width: 96%;
+  max-width: 960px;
+  margin: 44px auto 44px auto;
+  text-align: center;
+}
+
+.headerButton {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.original {
+  display: inline-block;
+  margin: 0px auto;
+}
+
+.original,
+.circular--square,
+.circular--landscape,
+.circular--portrait {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.headerColumn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 32px;
+}
+
+.bioLogoColumn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 10px;
+}
+
+.bioTextLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(14, 113, 131, 0.829);
+}
+
+.bioTextLink:hover{
+  text-decoration: underline;
+}
+
+.projectImageColumn{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.projectImageColumn img{
+  margin:0 0 0 0px;
+  transform: scale(1);
+  transition: transform 1s, margin 1.5s;
+}
+
+.projectImageColumn img:hover {
+  transform: scale(1.8) translate(25%, 0%);
+  border:1px #d8d8d8b7 solid;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+  transition: transform 1s, margin 1.5s, border 1s;
+}
+
+.projectTextColumn {
+  max-width: 50%;
+  padding: 1vh 2vw;
+  padding-bottom: 3vh;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.headerButtonAction {
+  display: inline-block;
+  padding: 1%;
+  padding-top: 2%;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.headerButtonAction:hover {
+  background-color: #11272b;
+  transition: background-color 0.3s;
+}
+
+.projectButtonAction {
+  text-align: center;
+  padding: 8px;
+  font-family: "Noto Sans Bold";
+  font-weight: bold;
+  font-size: 18px;
+  border:1px #bbbbbb solid;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-decoration: none;
+  color: rgba(253, 77, 121, 0.8);
+  border-radius: 6px;
+  background-color: rgba(240, 240, 240, 0.8);
+  transition: background-color 0.3s;
+}
+
+.projectButtonAction:hover{
+  background-color: rgba(250, 217, 108, 0.8);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.footer {
+  padding: 25px;
+  text-align: center;
+}
+
+.topButtonAction {
+  display: block;
+  width: 120px;
+  line-height: 30px;
+  margin: 0px auto;
+  padding: 10px;
+  font-family: "Noto Sans Bold";
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #2c4457;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.topButtonAction:hover {
+  background-color: #11272b;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.headertitle {
+  font-size: 54px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+}
+
+.headerline {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin: 10px;
+}
+
+.bioline {
+  text-align: left;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  margin: 10px;
+}
+
+.logoline {
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.projectline {
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+#projectImage {
+  height: auto;
+  border: 0.1vw #bbbbbb solid;
+  border-radius: 1%;
+  background-color: white;
+  padding: 3px;
+}
+
+.authorline {
+  font-size: 20px;
+  text-align: left;
+  color: rgba(14, 113, 131, 0.829);
+}
+
+.adress:link {
+  text-decoration: none;
+  color: rgba(199, 191, 74, 1.0);
+  transition: color 0.5s;
+}
+
+.adress:visited {
+  color: rgba(199, 191, 74, 1.0);
+  transition: color 0.5s;
+}
+
+.adress:hover {
+  text-decoration: underline;
+  color: rgb(255, 244, 92);
+  transition: color 0.5s;
+}
+
+hr.light {
+  width: 75%;
+  border: 0;
+  height: 0;
+  border-top: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+hr.heavy {
+  border: 1px;
+  height: 1px;
+  width: 90%;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+
+/* Pad */
+@media only screen and (max-width: 1024px) {
+  .header {
+    padding: 1vw 0vw 1vw 0vw;
+  }
+
+  #headerButton {
+    width: 15%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .headerButtonAction{
+    display: unset;
+    padding: 1.5%;
+  }
+
+  .headerButtonAction:hover{
+    background-color: unset;
+  }
+
+  .bioLogoColumn {
+    padding: 1vh 0vw;
+    width: 100%;
+  }
+
+  #projectImage {
+    width: 80%;
+    height: auto;
+    border: 0.1vw #bbbbbb solid;
+  }
+
+  .projectImageColumn img:hover {
+    margin:0 0 0 0%;
+    transform: scale(1);
+    border:0px #d8d8d8b7 solid;
+    padding: 0px;
+  }
+
+  .projectTextColumn {
+    max-width: 90%;
+  }
+
+  .topButtonAction:hover {
+    background-color: #11272b;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .bioLogoColumn {
+    display: unset;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size: 8vw;
+    letter-spacing: 0vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  #navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    padding: 1px;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: bold;
+  }
+
+  .header {
+    padding: 5vw 0vw 1vw 0vw;
+  }
+
+  #head_shot {
+    width: 50%;
+    height: auto;
+  }
+
+  #headerButton {
+    width: 15%;
+    height: auto;
+    margin-top: 2%;
+  }
+
+  #bioImage {
+    width: 50%;
+    height: auto;
+    padding-top: 15%;
+  }
+
+  #projectImage {
+    width: 90%;
+    height: auto;
+    border: 0.1vw #bbbbbb solid;
+  }
+
+  .headerColumn {
+    padding: 0%;
+  }
+
+  .headertitle {
+    font-size: 10vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    text-align: center;
+  }
+
+  .headerline {
+    font-size: 0%;
+    margin: 0%;
+  }
+
+  .footer {
+    padding: 0px;
+  }
+
+  .topButtonAction {
+    width: auto;
+    font-size: 4vw;
+    border-radius: unset;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+}

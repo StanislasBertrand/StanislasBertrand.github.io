@@ -1,23 +1,93 @@
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name="title" content="Stanislas Bertrand open source projects">
+    <meta name="theme-color" content="#2c4457">
+    <title>Stanislas Bertrand</title>
     <meta name="description" content="links to github repositories Stanislas Bertrand has either created or took part in">
     <meta name="keywords" content="Retinface, Tensorflow, Deep learning">
     <meta name="author" content="Stanislas Bertrand">
     <meta name="twitter:site" content="@stan_btd">
+    <link rel="stylesheet" href="github_widget/github-widget.css" type="text/css" />
+    <link rel="stylesheet" href="css/presentational.css">
+    <link rel="stylesheet" href="css/circular-images.css">
 </head>
+
 <body>
-<center>
-<h2><br>
-GitHub repositories
-<br></h2>
-<table width=800px><td>
-<h3><br><a href="https://github.com/StanislasBertrand/RetinaFace-tf2">https://github.com/StanislasBertrand/RetinaFace-tf2</a> : Tensorflow 2.0+ reimplementation of the retinaface paper.<br></h3>
-<h4>RetinaFace (RetinaFace: Single-stage Dense Face Localisation in the Wild, published in 2019) reimplemented in Tensorflow 2.0, with pretrained weights available !<br></h4>
-<h3><br><a href="https://github.com/StanislasBertrand/UniversalFaceRecog-TF2">https://github.com/StanislasBertrand/UniversalFaceRecog-TF2</a> : Tensorflow2.0+ framework to recognize people in images.<br></h3>
-<h4><br></h4>
-</td></table>
-</center>
+    <div id="navbar">
+        <a href="#top">Home</a>
+        <a href="#Biography">About me</a>
+        <a href="#Github Repositories">GithubRepos</a>
+    </div>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-200px";
+          }
+        }
+    </script>
+
+    <div class="header">
+        <div class="headerColumn">
+            <img class="circular--square" id="head_shot" src="images/head_shot.jpg" height="200">
+        </div>
+
+        <div class="headerColumn">
+            <p class="headertitle">Stanislas Bertrand</p>
+            <a class="headerButtonAction" href="mailto:stanislas-bertrand@hotmail.fr"><img src="images/mail_logo.png" id="headerButton" height="45px"></a>
+            <a class="headerButtonAction" href="https://github.com/StanislasBertrand"><img src="images/github_logo.png" id="headerButton" height="45px"></a>
+            <a class="headerButtonAction" href="https://www.linkedin.com/in/stanislasbertrand/"><img src="images/linkedIn_logo.png" id="headerButton" height="45px"></a>
+            <a class="headerButtonAction" href="https://twitter.com/stan_btd"><img src="images/twitter_logo.png" id="headerButton" height="45px"></a>
+        </div>
+        <div class="headerButton">
+        </div>
+    </div>
+
+    <div class="section" id="About me">
+        <h1>About me</h1>
+        <p class="bioline">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            I develop, industrialise, deploy and maintain computer vision and NLP algorithms in production pipelines.
+            I am currently a machine learning software engineer at
+            <a class="bioTextLink" href="https://www.faurecia.com/">Faurecia</a>
+            , where I deploy cameras and ML in factories in order to detect flaws in industrial products on factory lines.
+            Previously, I worked at
+            <a class="bioTextLink" href="https://www.linkfluence.com/">Linkfluence</a>
+            , where I built ML pipelines to analyse millions of images, tweets, or social media profiles daily.
+            I received my M.S. degree in machine learning and signal processing from CentraleSupelec university.
+        </p>
+        <div class="bioLogoColumn">
+            <img src="images/Faurecia_logo.png" id="bioImage" height="160">
+            <p class="logoline">ML Software Engineer<br>Faurecia<br>April 2020 - Present</p>
+        </div>
+
+        <div class="bioLogoColumn">
+            <img src="images/Linkfluence_logo.png" id="bioImage" height="160">
+            <p class="logoline">ML Software Engineer<br>Linkfluence<br>Nov 2017 - April 2020</p>
+        </div>
+
+        <div class="bioLogoColumn">
+            <img src="images/CS_logo.png" id="bioImage" height="160">
+            <p class="logoline">Engineering M.S.<br>CentraleSupelec<br>Sep 2011 - Jun 2015</p>
+        </div>
+    </div>
+
+    <hr class="heavy">
+
+    <div class="section" id="Github Repositories">
+        <h1>Github Repositories</h1>
+        <div class="github-widget" data-user="StanislasBertrand"></div>
+
+        <script src="github_widget/github-widget.min.js"></script>
+    </div>
+
 </body>
+
 </html>
