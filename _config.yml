@@ -1,1 +1,16 @@
 theme: jekyll-theme-slate
+plugins:
+  - jekyll-seo-tag
+title: Stanislas Bertrand open source projects
+tagline: Stanislas Bertrand open source projects | links to github repositories I have either created or took part in
+url: stanislasbertrand.github.io
+twitter:
+  username: stan_btd
+author: Stanislas Bertrand
+social:
+  name: Stanislas Bertrand
+  links:
+    - https://twitter.com/stan_btd
+    - https://www.linkedin.com/in/stanislasbertrand/
+    - https://github.com/StanislasBertrand
+google_site_verification: google686defcad10bd761.html
